@@ -1,119 +1,58 @@
-# TuiliRec - Professional Screen Recording Tool
+# OpenRecord - 定制版
 
-TuiliRec is a modern, browser-based screen recording tool with AI-powered features including teleprompter and AI interviewer modes.
+> 🎥 基于 [TuiliRec by Tuili AI](https://github.com/tuili-ai/openrecord) 的定制版本  
+> 👨‍💻 定制开发：**leoghost9528-sketch**
 
-## ✨ Features
+## 🌐 在线演示
 
-- 🎥 **High-Quality Recording**: Record your screen with camera overlay at 30fps with 8Mbps video quality
-- 📝 **AI Teleprompter**: Real-time speech recognition with word highlighting using Aliyun ASR
-- 🤖 **AI Interviewer**: Interactive AI conversation mode powered by Gemini Live API
-- 🎨 **Customizable Canvas**: Multiple aspect ratios (16:9, 4:3, 9:16, 3:4) with background options
-- 📹 **Flexible Camera**: Draggable PIP camera with full-camera mode
-- 🎚️ **Audio Mixing**: Seamless mixing of system audio and microphone input
-- 🔍 **Zoom & Pan**: Double-click to zoom, drag to pan the canvas
+**立即体验**：https://openrecord.vercel.app
 
-## 🚀 Quick Start
+## ✨ 定制功能
 
-### Prerequisites
+### 1. 摄像头大小调整
+- 添加 4 档大小选择（Small/Medium/Large/X-Large）
+- 实时调整，无需重启
+- 位置：控制栏 ⊕ 按钮
 
-- Node.js (v18 or higher)
-- A Gemini API key (for AI Interviewer)
-- Aliyun ASR credentials (for Teleprompter)
+### 2. 优化视觉效果
+- 去除摄像头周围的蓝色声音边缘动画
+- 提供更简洁专业的录制界面
 
-### Installation
+### 3. Windows 启动脚本
+- 一键启动开发服务器
+- 中文界面，自动检查项目目录
 
-1. Clone the repository:
-   ```bash
-   git clone git@github.com:tuili-ai/rec.tuili.ai.git
-   cd rec.tuili.ai
-   ```
+## 🚀 快速开始
 
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+\`\`\`bash
+# 安装依赖
+npm install
 
-3. Configure environment variables:
-   ```bash
-   cp .env.example .env.local
-   ```
+# 启动开发服务器
+npm run dev
+\`\`\`
 
-   Edit `.env.local` and fill in your API credentials:
-   - `GEMINI_API_KEY`: Your Gemini API key from https://ai.google.dev/
-   - `OPENROUTER_API_KEY`: Your OpenRouter API key from https://openrouter.ai/keys
-   - `ALIYUN_ACCESS_KEY_ID`: Aliyun Access Key ID
-   - `ALIYUN_ACCESS_KEY_SECRET`: Aliyun Access Key Secret
-   - `ALIYUN_TOKEN`: Aliyun ASR token (24-hour validity)
-   - `ALIYUN_APP_KEY`: Your Aliyun App Key
+访问 http://localhost:3000
 
-4. Run the development server:
-   ```bash
-   npm run dev
-   ```
+## 🛠️ 技术栈
 
-5. Open http://localhost:3003 in your browser
+- React 19 + TypeScript
+- Vite 6
+- Canvas API + MediaRecorder API
+- Web Audio API
+- Vercel 部署
 
-## 📖 Usage
+## 📝 我的贡献
 
-### Basic Recording
+- ✅ 添加摄像头大小调整功能
+- ✅ 优化视觉效果（去除音频可视化）
+- ✅ 创建 Windows 启动脚本
+- ✅ 部署到 Vercel
 
-1. Click "Start Recording" to initialize screen capture and camera
-2. Select your screen/window when prompted
-3. Adjust aspect ratio and camera position as needed
-4. Click the red "Record" button to start recording
-5. Click "Stop" when finished - video will download automatically
+## 📄 许可证
 
-### AI Teleprompter
+本项目基于 [TuiliRec](https://github.com/tuili-ai/openrecord) 开发，遵循 MIT License。
 
-1. Click the settings icon to configure your teleprompter script
-2. Enable "Teleprompter" mode
-3. Start speaking - words will highlight in real-time as you speak
-4. Use scroll wheel or click arrows to manually navigate
+原项目版权归 Tuili AI 所有。
 
-### AI Interviewer
-
-1. Enable "AI Interviewer" mode
-2. Start speaking - AI will generate follow-up questions when you pause
-3. Questions appear at the top of the screen to guide your recording
-
-## 🛠️ Technology Stack
-
-- **Frontend**: React 19, TypeScript, Vite
-- **Styling**: TailwindCSS
-- **AI Services**:
-  - Gemini Live API (AI Interviewer)
-  - Aliyun Real-time ASR (Teleprompter)
-  - OpenRouter API (Alternative AI models)
-- **Recording**: MediaRecorder API, Canvas API, Web Audio API
-
-## 📝 Configuration
-
-See [.env.example](.env.example) for all available environment variables.
-
-For detailed Aliyun ASR setup instructions, see [ALIYUN_ASR_SETUP.md](ALIYUN_ASR_SETUP.md).
-
-## 🔧 Build
-
-To build for production:
-
-```bash
-npm run build
-```
-
-The built files will be in the `dist` directory.
-
-## 📄 License
-
-MIT License
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📧 Support
-
-For issues and questions, please open an issue on GitHub.
-
----
-
-Built with ❤️ by Tuili AI
+定制开发：**leoghost9528-sketch** | 2026
